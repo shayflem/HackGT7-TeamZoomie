@@ -1,3 +1,5 @@
+#Trial Run of Discord Bot
+
 import discord
 from discord.ext import commands
 
