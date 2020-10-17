@@ -18,8 +18,12 @@ async def on_message(message):
     else: 
         await message.channel.send("Hello, My name is Zoomie.")
 
-
-
+@client.event
+async def on_member_join(member):
+    for channel in member.server.channels:
+        if str(channel) == "general":
+            await client.send_message(f"""Welcome to the server {member.mention}""")
+        
 
 #This deletes non image entries - text
 #@client.event
@@ -35,6 +39,7 @@ async def checkin(ctx, *args):
     for arg in args:
         await ctx.send(arg)
 
+        
 
 
 
