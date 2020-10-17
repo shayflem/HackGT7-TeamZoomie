@@ -1,3 +1,6 @@
+#Actual Project
+#Self Care Discord Bot "Zoomie"
+
 import discord
 from discord.ext import commands
 
