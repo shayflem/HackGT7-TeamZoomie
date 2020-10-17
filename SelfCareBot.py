@@ -12,7 +12,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.content.startswith("hello"):\
-         await message.channel.send("Hello, My name is Zoomie.")   
+        await message.channel.send("Hello, My name is Zoomie.")   
     if str(message.author) == "ShayFlem#8584":
         await message.channel.send("Greetings " + str(message.author) + " !")
     else: 
