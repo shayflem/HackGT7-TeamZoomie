@@ -14,7 +14,7 @@ async def on_message(message):
     if message.content.startswith("hello"):
        
         if message.content.startswith("Hello"):
-            await message.channel.send("Hello, My name is Zoomie.")   
+            await message.channel.send("Hello, My name is Zoomie.", color=0x6bee8f)   
     if str(message.author) == "ShayFlem#8584":
         await message.channel.send("Greetings " + str(message.author) + " !")
     else: 
