@@ -1,0 +1,20 @@
+import discord
+
+def updater(): # method that loops some activity every 10 seconds
+    import time
+    from datetime import date
+    date1 = date.today()
+    # members = guild.members
+    # online_members = Widget.members
+    while True:
+        date2 = date.today()
+        if date1 != date2:
+            # reset all info regarding sent messages for the day
+        date1 = date.today()
+        # collect list of online members
+        # compare list of previously online members
+        # if member is in online members but not previously online members
+        # send self care message and store the fact that this member has been sent a message for the day
+        time.sleep(10) # pauses program for 10 seconds
+
+updater() # calls method "updater" which will infinitely loop
