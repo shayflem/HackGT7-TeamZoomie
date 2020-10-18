@@ -14,7 +14,7 @@ async def on_message(message):
     if message.content.startswith("hello"):
        
         if message.content.startswith("Hello"):
-            await message.channel.send("Hello, My name is Zoomie.", color=0x6bee8f)   
+            await message.channel.send("Hello, My name is Zoomie.")   
     if str(message.author) == "ShayFlem#8584":
         await message.channel.send("Greetings " + str(message.author) + " !")
     else: 
@@ -36,6 +36,16 @@ client = commands.Bot(command_prefix="$")
 async def checkin(ctx, *args):
     for arg in args:
         await ctx.send(arg)
+
+
+List = ["Be Kind to Yourself","Zoomie Loves You =)", "Life Will Get Better","Make Sure You Eat Today"]
+print("\nAffirmation List: ") 
+print(List[0])  
+print(List[1]) 
+print(List[2])  
+print(List[3]) 
+
+
 
 
 
