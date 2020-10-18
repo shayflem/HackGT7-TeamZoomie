@@ -4,17 +4,20 @@ def updater(): # method that loops some activity every 10 seconds
     import time
     from datetime import date
     date1 = date.today()
-    # members = guild.members
-    # online_members = Widget.members
+    # members = guild.members (list of all members)
+    # online_members = ctx.Widget.members (members online)
+    # messages_sent = None * members_count
     while True:
         date2 = date.today()
         if date1 != date2:
             # reset all info regarding sent messages for the day
         date1 = date.today()
-        # collect list of online members
-        # compare list of previously online members
-        # if member is in online members but not previously online members
-        # send self care message and store the fact that this member has been sent a message for the day
+        # collect new_online_members = ctx.Widget.members
+        # compare with online_members
+        # if member is in new_online_members but not online_members
+            # send random private message
+            # store the fact that this member has been sent a message for the day
+                # find index in members and add 1 in the messages_sent list at same index
         time.sleep(10) # pauses program for 10 seconds
 
 updater() # calls method "updater" which will infinitely loop
