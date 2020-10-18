@@ -1,0 +1,27 @@
+import discord
+from discord.ext.commands import Bot
+from discord import Member
+import random
+
+client = discord.Client()
+
+@client.event
+async def on_message(message):
+    affirmation = ["Stay hydrated!","'Try not to become a person of success, but rather try to become a person of value.'– Albert Einstein","Think of everyone who loves you :)","You got this!","'You don’t have to see the whole staircase, just take the first step.'– Martin Luther King, Jr","Notice your body. Are you hungry, tense, or tired?", " Notice your feelings. Are you happy, sad, or angry?", "Say yes to an opportunity for growth.","Say no to a request you’re unwilling or unable to agree to.", ". Respond, don’t react in a difficult conversation.", "I love you :)", "Count your blessings.","Notice your body. Are you hungry, tense, or tired?","Notice your feelings. Are you happy, sad, or angry?","Say yes to an opportunity for growth.","Say no to a request you’re unwilling or unable to agree to.","Respond, don’t react in a difficult conversation.","Count your blessings.","Be kind to yourself.","Be kind to others.","Get a good night’s sleep.","Take a nap.","Go for a walk.","Smile.","Laugh","Enjoy a good cry","Ask for help with a difficult task.","Get hugged.","Eat a satisfying meal.","Sing along to your favorite song.","Dance for a bit.","Get a massage.","Take a break.","Take three deep breaths, breathing in through your nose and out through your mouth.","Roll your shoulders down and back.","Stretch your body.","Wear comfortable shoes.","Wear your favorite outfit.","Read a book.","Watch a movie.","Play with a child.","Walk a dog.","Pet a cat.","Go on an adventure- try a new restaurant or even just a new route to work.","Be curious.","Be playful.","Tell a joke.","Show compassion for yourself.","Color a picture.","Play air guitar.","Garden.","Follow your heart.","Say something nice about yourself.","Make a list of what you like about yourself.","Accept a compliment without justification or explanation.","Leave work undone.","Leave the party if you’re not having fun.","Be curious.","Enjoy the little things.","Forgive someone. (Hint: It might be yourself.)","Let go of something you’ve been holding onto.","If you can’t think straight, stop thinking and feel.","Write a letter to your feelings.","Help someone else with their problem.","Say, I love you, to yourself in the mirror.","Take a hot bath.","Plan your next vacation.","Meditate.","Do yoga.","Go for a run.","Ride a bike.","In one situation, with one person, ask for what you need.","In one situation, with one person, ask for what you want.","Try something new.","Write down your worries on paper, them rip them up and throw them away.","Get rid of a material possession that doesn’t bring you joy.","Turn off all digital devices for one hour per day.","Unsubscribe from an email list.","Give yourself a break.","Put your thoughts down on paper.","Do one thing you’ve been avoiding that you know will benefit you.","Celebrate an accomplishment.","Admit when you make a mistake. (Mistakes are okay!)","Today, do one thing exceptionally well.","Check one item off your to-do list without doing it.","Floss your teeth.","Drink a glass of water.","Eat a vegetable.","Listen to music.","Spend an hour with friends or family.","Spend an hour alone.","Notice where your body feels tense and relax that area.","Delete an unread email.","Pay a bill.","Pass on buying that thing you don’t really need.","Reach out to a friend you haven’t spoken to in a while.","Choose to have a good day.","Write down an inspiring quote and hang it where you will see it every day.","Re-read this list of  ways to self-care.","Experience your  senses- what do you see, hear, smell, touch, and taste?","Do nothing for  minutes.","Think of a happy memory.","Spend  minutes in your favorite spot.","Enjoy a delicious treat.","Prepare a meal with love.","Try a new recipe.","Give yourself permission to do something that’s difficult for you.","Be silly.","Be spontaneous.","Do one thing simply because it brings you joy.","Give up one thing that brings you pain.","Do your best and forget the rest."]
+    message.content = message.content.lower()
+    if message.author == client.user or message.author.name == "TheZoomieHelper":
+        return
+    if message.content.startswith("hello"):
+        await message.channel.send("Hello " + str(message.author.name) + " :)")
+    if message.content == "hey zoomie":
+        await message.author.send(affirmation[random.randint(0, len(affirmation))])
+        await message.channel.send(":)")
+    if message.content == "i hate you":
+        await message.author.send('gimme all your money')
+    if message.content == "what's the good word?":
+        await message.channel.send("To hell with Georgia!!")
+
+
+
+
+client.run("NzY3MDM0MjI0Njg2Mzk5NDg4.X4sCSQ.k27nW1VAl5FfnyqvemxgetvJ8pQ")
