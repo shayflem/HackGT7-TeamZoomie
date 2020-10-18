@@ -6,7 +6,7 @@ def updater(): # method that loops some activity every 10 seconds
     date1 = date.today()
     # members = guild.members (list of all members)
     # online_members = ctx.Widget.members (members online)
-    # messages_sent = None * members_count
+    # messages_sent = [0] * members_count (messages sent to each member
     while True:
         date2 = date.today()
         if date1 != date2:
@@ -14,7 +14,7 @@ def updater(): # method that loops some activity every 10 seconds
         date1 = date.today()
         # collect new_online_members = ctx.Widget.members
         # compare with online_members
-        # if member is in new_online_members but not online_members
+        # if member is in new_online_members but not online_members and messages_sent for the member is 0
             # send random private message
             # store the fact that this member has been sent a message for the day
                 # find index in members and add 1 in the messages_sent list at same index
