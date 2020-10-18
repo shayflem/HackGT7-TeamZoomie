@@ -1,6 +1,6 @@
 # HackGT7-TeamZoomie
 
-#  Team Members:
+# Team Members:
 #  -Afonso Zhan
 #  -Rafael Collado
 #  -Shay Fleming
