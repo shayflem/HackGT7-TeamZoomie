@@ -1,0 +1,29 @@
+from discord.ext import commands
+import time
+from datetime import date
+
+client = commands.Bot(command_prefix="!")
+
+@client.command()
+async def goBot(ctx):
+    members = [] # ctx.guild.members doesn't workkkkk
+    members_count = ctx.guild.member_count
+    messages_sent = [0] * members_count
+    print(members)
+    print(members_count)
+    print(messages_sent)
+    date1 = date.today()
+    while True:
+        date2 = date.today()
+        if date1 != date2:
+            messages_sent = [0] * members_count
+            date1 = date.today()
+        # collect new_online_members = ctx.Widget.members
+        # compare with online_members
+        # if member is in new_online_members but not online_members and messages_sent for the member is 0
+            # send random private message
+            # store the fact that this member has been sent a message for the day
+                # members[i] + 1
+        time.sleep(10)
+
+client.run("NzY2OTExNzE2NTI4NDg4NDY4.X4qQMQ._tVC7A7jBTLFtH45LEeTBscMDcQ")
